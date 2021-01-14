@@ -13,7 +13,7 @@ export class ContaCorrente extends Conta{
         //TEM QUE CHAMAR O SUPER QUANDO VAMOS DERIVAR UMA CLASSE, NA HORA DE ACESSAR O THIS
         //nem sempre esta chamando o constructor, essa palavra super faz uma referência à classe que ele esta estendendendo a sua classe mãe
         // neste caso o SUPER esta recebendo o CONSTRUCTOR da classe CONTA, se eu estivesse herdando de outra classe como a contaPoupança ele iria referenciar a classe contaPoupanca
-        // vai char o constructor da classe pai estou chamando o construtor dentro do construtor. Passando o mouse em cima do super ele diz, Este super esta referenciando um constructor da classe Conta e esse precisa de um saldo inicial, cliente e agencia
+        // vai chamar o constructor da classe pai estou chamando o construtor dentro do construtor. Passando o mouse em cima do super ele diz, Este super esta referenciando um constructor da classe Conta e esse precisa de um saldo inicial, cliente e agencia
         // super é uma referencia para a classe pai
         ContaCorrente.numeroDeContas += 1;
     }
