@@ -5,7 +5,11 @@ export class Conta{
         this._agencia = agencia;
        
     }
-         
+    
+    // atributos que existem são: Privados, Públicos e Protegidos
+    //Privado - pode ser usado só por aquela classe
+    //Publico - Ser usado por todo mundo
+    //Protegido - ele pode ser usado por quem herda daquela classe mas tambem pela própria classe
 
     set cliente(novoValor){
         if(novoValor instanceof Cliente){
@@ -24,12 +28,17 @@ export class Conta{
 
     sacar(valor){
         let taxa = 1
-      
-       const valorSacado = taxa * valor;
+        return this._sacar(valor, taxa); // para retornar o valor que puxa do _sacar
+
+    }
+
+    _sacar(valor, taxa){
+        const valorSacado = taxa * valor;
         if(this._saldo >= valorSacado){
             this._saldo -= valorSacado;
             return valorSacado;
         }
+        return 0;
     }
 
     depositar(valor){
