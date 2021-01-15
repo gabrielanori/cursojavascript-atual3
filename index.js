@@ -14,10 +14,22 @@ diretor.cadastrarSenha("123456")
 
 const gerente = new Gerente("Ricardo", 5000, 123456015483);
 gerente.cadastrarSenha("123")
+const cliente = new Cliente("Lais", 78945612379, "456")
 
-const estaLogado = SistemaAutenticacao.login(gerente, "123"); // POLIMORFISMO  COLOCANDO MEU GERENTE AQUI OU MEU DIRETOR SEM PRECISAR MUDAR A AUTENTICAÇÃO
+const diretorEstaLogado = SistemaAutenticacao.login(diretor, "123456");
+
+const gerenteEstaLogado = SistemaAutenticacao.login(gerente, "123");
+
+const clienteEstaLogado = SistemaAutenticacao.login(cliente, "456");
+console.log(gerenteEstaLogado, diretorEstaLogado, cliente);
+
+//const estaLogado = SistemaAutenticacao.login(gerente, "123"); // POLIMORFISMO  COLOCANDO MEU GERENTE AQUI OU MEU DIRETOR SEM PRECISAR MUDAR A AUTENTICAÇÃO
 // quero um metodo estatico chamado login
 // static serve tanto para propriedade quanto pra metodos
+
+//POLIMORFISMO quer dizer que a gente pode ter diferentes objetos diferentes classes sendo tratadas da mesma maneira, um objeto que se transforma em várias formas
+
+//temos o Gerente e diretor derivando herdando da classe funcionario que tem a senha e a propriedade senha
 
 const cliente1 = new Cliente("Ricardo", 11122233309);
 const contaCorrenteRicardo = new ContaCorrente( 0, cliente1, 1001);
@@ -30,7 +42,8 @@ const contaSalario = new ContaSalario(cliente1);
 //ELA É UMA CLASSE BASE
 //PRECISO BLOQUEAR
 
-console.log(estaLogado)
+console.log(clienteEstaLogado);
+
 //console.log(contaSalario);
 //console.log(contaPoupanca);
 //console.log(contaCorrenteRicardo);
