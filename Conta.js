@@ -1,4 +1,4 @@
-//CLASSE CONTA È UMA CLASSE ABSTRATA não pode ser instanciada, só funciona para SER HERDADA, nunca pode ser construida diretamente, nunca pode dar um new nela, nunca vai ter uma instancia dessa própria classe, mas ela pode ser herdada,  assim como nós temos a classe ContaCorrente que herda a Classe abstrata chamada Conta
+//CLASSE CONTA È UMA CLASSE ABSTRATA não pode ser instanciada DIRETAMENTE, só funciona para SER HERDADA, nunca pode ser construida diretamente, nunca pode dar um new nela, nunca vai ter uma instancia dessa própria classe, mas ela pode ser herdada,  assim como nós temos a classe ContaCorrente que herda a Classe abstrata chamada Conta
 export class Conta{
     constructor( saldoInicial, cliente, agencia){
         if(this.constructor == Conta){ // o this.constructor salva quem foi o constructor inicialmente chamado
@@ -30,7 +30,7 @@ export class Conta{
     get saldo(){
         return this._saldo;
     }
-
+//METODO ABSTRATO definir uma interface padrao, todo mundo vai ter esse método, mas devemos definir como cada um vai realmente executar ele
    sacar(valor){ // nao é feito para ser chamado diretamente assim como a classe Conta nao é pra ser instanciada diretamente, é feito pra ser sobrescrito,  MÉTODO ABSTRATO assim garantimos que todas as implemementações que herdam de Conta vão ter que implementar esse método sacar e vão ter que saber como vao chamar esse método e manipular ele para ter uma ter uma taxa para saber como uma conta tem q fazer seu saque ou não, então lanço um erro se eles nao especificarem
         throw new Error("O método Sacar da conta é abstrato")
        
