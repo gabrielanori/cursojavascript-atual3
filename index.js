@@ -28,6 +28,7 @@ console.log(gerenteEstaLogado, diretorEstaLogado, cliente);
 // static serve tanto para propriedade quanto pra metodos
 
 //POLIMORFISMO quer dizer que a gente pode ter diferentes objetos diferentes classes sendo tratadas da mesma maneira, um objeto que se transforma em várias formas
+//POLIMORFISMO = TRATAR OBJ DIFERENTES DE MANEIRAS SIMILARES
 
 //temos o Gerente e diretor derivando herdando da classe funcionario que tem a senha e a propriedade senha
 
